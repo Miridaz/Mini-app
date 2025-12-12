@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Mini App</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            /* Используем переменные темы Telegram для фона и текста */
+            background-color: var(--tg-theme-bg-color, #ffffff);
+            color: var(--tg-theme-text-color, #000000);
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Привет, Telegram! 👋</h1>
+    <p>Мое приложение работает.</p>
+
+    <script>
+        // Сообщаем телеграму, что приложение готово к работе
+        window.Telegram.WebApp.ready();
+        // Разворачиваем приложение на весь экран
+        window.Telegram.WebApp.expand();
+    </script>
+</body>
+</html>
